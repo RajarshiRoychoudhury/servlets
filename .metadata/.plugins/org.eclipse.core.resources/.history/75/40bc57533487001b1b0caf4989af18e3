@@ -1,0 +1,52 @@
+import logo from './logo.svg';
+import './App.css';
+import { useState } from 'react';
+import { axios } from 'axios';
+
+
+
+function App() {
+  const [num1,setNum1] =useState(0)
+const [num2,setNum2] = useState(0);
+
+
+const handleSubmit = (event) =>{
+  event.preventDefault();
+  console.log(num1);
+  console.log(num2);
+  axios({
+    method: 'post',
+    url: "https//:localhost/8080/add",
+    data: {
+      "num1":num1,
+      "num2":num2
+    }
+  });
+}
+  return (
+    <div className="App">
+      {/* <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header> */
+          <form onSubmit={handleSubmit}>
+          <input type="text" name="num1" onChange = {(event)=>setNum1(event.target.value)}></input>
+          <input type="text" name="num2" onChange = {(event)=>setNum2(event.target.value)}></input>
+          <input type="submit"></input>
+          </form>
+      }
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,4 @@
+browser-choice=0
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="2">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n<external location\="/usr/bin/google-chrome" name\="Chrome"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:8080/firstservlet/add?num1\=2&num2\=3|*|http\://localhost\:8080/firstservlet/index.html|*|http\://localhost\:8080/firstservlet/add|*|http\://localhost\:8080/add|*|http\://localhost\:8080/|*|

@@ -1,0 +1,11 @@
+package firstservlet;
+
+public class Flight {
+	public String source;
+	public String destination;
+	public Flight(String s, String d){
+		source = s;
+		destination = d;
+	
+}
+}

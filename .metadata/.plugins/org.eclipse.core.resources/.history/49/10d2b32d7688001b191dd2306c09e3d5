@@ -1,0 +1,35 @@
+package firstservlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.google.gson.*;
+import "/Flight"
+
+public class ReturnAllFlight extends HttpServlet{
+		/**
+	 * 
+	 */
+	private Gson gson = new Gson();
+	private static final long serialVersionUID = 1L;
+
+		public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+			
+			Flight f1 = new Flight("Kolkata","Siliguri");
+			Flight f2 = new Flight("Darjeeling","Shillong");
+			ArrayList<Flight> l = new ArrayList<Flight>();
+			l.add(f1);
+			l.add(f2);
+			res.setContentType("application/json");
+			PrintWriter out = res.getWriter();
+			out.print(gson.toJson(l));
+			out.flush();
+			
+			
+		}
+}
